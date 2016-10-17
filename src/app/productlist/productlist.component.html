@@ -1,0 +1,28 @@
+<div class="col-xs-12 products-section feed-products-section" id="main">
+   <div data-row="" class="center-product">
+      <div class="col-xs-6 col-md-3 width20p product mob_padding" *ngFor="let product of searchResults; let i = index; trackBy: productId">
+         <div class="product-image-container"><a  routerLink="/productDetails/{{i}}" title="">
+            <img data-desktop-src="http://img1.craftsvilla.com/thumb/216x216/C/V/CV-MSHON66953901030--Shonayaa-Craftsvilla_1.jpg" data-mobile-src="http://img1.craftsvilla.com/thumb/166x166/C/V/CV-MSHON66953901030--Shonayaa-Craftsvilla_1.jpg" alt="" class="product-image" src="http://img1.craftsvilla.com/thumb/216x216/{{ product.imgUrl }}">
+            </a>
+         </div>
+         <div class="product-details-container col-xs-12">
+            <div class="product-name">
+               <a title="Yellow and blue georgette and chiffon saree" href="http://www.craftsvilla.com/catalog/product/view/id/3566887/s/shonaya-blue-yellow-designer-georgette-embroidery-work-saree-with-blouse-piece">
+               {{ product.productName }}
+               </a>
+            </div>
+            <div class="price-container col-xs-12 nopadding">
+               <div class="col-xs-6 col-md-6 col-lg-4 discounted-price n-price-fs nopadding">Rs. {{ product.regularPrice }}
+               </div>
+               <div class="col-xs-6 col-md-6 col-lg-4 original-price n-price-fs nopadding hidden-xs hidden-sm hidden-md">
+                  <s>{{ product.regularPrice }}</s>
+               </div>
+               <div class="col-xs-6 col-md-6 col-lg-4 save-percent nopadding">
+                  Save {{ product.discountPercentage }}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+

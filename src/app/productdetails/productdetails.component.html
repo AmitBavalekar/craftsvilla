@@ -1,0 +1,50 @@
+<div class="row-fluid">
+   <div class="container product_container" itemscope="" itemtype="http://schema.org/Product">
+      <div class="col-xs-12 col-sm-6 big_image_container" id="messages_product_view">
+         <section class="product-slider pull-left col-md-12 nopadding">
+            <div class="big-image">
+               <div id="big1" data-class="gallery_1" class="big-zoom pinch-zoom" style="position: relative; overflow: hidden;">
+                  <img itemprop="image" src="http://img1.craftsvilla.com/thumb/500x500/{{ imgUrl }}" alt="" >
+                  <img src="http://img1.craftsvilla.com/orig/{{ imgUrl }}" class="zoomImg" style="position: absolute; top: -187.938517179024px; left: -543.043399638336px; opacity: 0; width: 1100px; height: 1100px; border: none; max-width: none; max-height: none;">
+               </div>
+               <div id="big2" data-class="gallery_2" class="big-zoom pinch-zoom" style="display: none; position: relative; overflow: hidden;">
+                  <img itemprop="image" src="http://img1.craftsvilla.com/thumb/500x500/{{ imgUrl }}" alt="">
+                  <img src="http://img1.craftsvilla.com/orig/{{ imgUrl }}" class="zoomImg" style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 1100px; height: 1100px; border: none; max-width: none; max-height: none;">
+               </div>
+               <div id="big3" data-class="gallery_3" class="big-zoom pinch-zoom" style="display: none; position: relative; overflow: hidden;">
+                  <img itemprop="image" src="http://img1.craftsvilla.com/thumb/500x500/{{ imgUrl }}" alt="" >
+                  <img src="http://img1.craftsvilla.com/orig/{{ imgUrl }}" class="zoomImg" style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 1100px; height: 1100px; border: none; max-width: none; max-height: none;">
+               </div>
+               <div id="big4" data-class="gallery_4" class="big-zoom pinch-zoom" style="display: none; position: relative; overflow: hidden;">
+                  <img itemprop="image" src="http://img1.craftsvilla.com/thumb/500x500/{{ imgUrl }}" alt="" >
+                  <img src="http://img1.craftsvilla.com/orig/{{ imgUrl }}" class="zoomImg" style="position: absolute; top: 0px; left: 0px; opacity: 0; width: 1100px; height: 1100px; border: none; max-width: none; max-height: none;">
+               </div>
+            </div>
+         </section>
+      </div>
+      <div class="col-xs-12 col-sm-5 nopadding">
+         <div class="product_description col-xs-12">
+            <h1 class="product-title col-xs-11 nopadding" itemprop="name">
+               {{ productName }}
+            </h1><br>
+            <div class="col-xs-12 price_container nopadding">
+               <div class="grayn">
+                  <i class="fa fa-rupee"></i>
+                  <s>{{ discountedPrice }}</s>
+               </div>
+               <meta itemprop="priceCurrency" content="INR">
+               <div class="col-xs-4 col-sm-4 col-md-3 nomargin nopadding price_details">
+                  <i class="fa fa-rupee"></i>
+                  <span itemprop="price">{{ regularPrice }}</span>
+               </div>
+               <div class="col-xs-8 col-sm-8 col-md-6" *ngIf="discountPercentage > 0">
+                  <div class="text-uppercase saved-percent text-center">
+                     you save {{ discountPercentage }}
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+   </div>
+</div>
